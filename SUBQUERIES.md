@@ -1,10 +1,18 @@
-#Subqueries
+# Subqueries
 
 A Subquery or Inner query or Nested query is a query within another SQL query and embedded within the WHERE clause.
 
 A subquery is used to return data that will be used in the main query as a condition to further restrict the data to be retrieved.
 
 Subqueries can be used with the SELECT, INSERT, UPDATE, and DELETE statements along with the operators like =, <, >, >=, <=, IN, BETWEEN etc.
+
+* A subquery is a SQL query within a query.
+
+* Subqueries are nested queries that provide data to the enclosing query.
+
+* Subqueries can return individual values or a list of records
+
+* Subqueries must be enclosed with parenthesis
 
 _There are a few rules that subqueries must follow:_
 
@@ -177,3 +185,62 @@ This would impact two rows and finally CUSTOMERS table would have the following 
 |  7 | Muffy    |  24 | Indore  | 10000.00 |
 +----+----------+-----+---------+----------+
 ```
+
+
+There is no general syntax; subqueries are regular queries placed inside parenthesis.
+Subqueries can be used in different ways and at different locations inside a query:
+
+Here is an subquery with the IN operator
+
+```
+SELECT column-names
+  FROM table-name1
+ WHERE value IN (SELECT column-name
+                   FROM table-name2
+                  WHERE condition)
+```
+
+Subqueries can also assign column values for each record:
+
+```
+SELECT column1 = (SELECT column-name FROM table-name WHERE condition),
+       column-names
+  FROM table-name
+ WHERE condition
+ ```
+
+# SQL Subquery Examples
+
+
+Problem: List products with order quantities greater than 100.
+
+ ```
+SELECT ProductName
+FROM Product
+WHERE Id IN (SELECT ProductId
+                FROM OrderItem
+                WHERE Quantity > 100)
+ ```
+
+
+
+Problem: List all customers with their total number of orders
+
+ ```
+SELECT FirstName, LastName,
+       OrderCount = (SELECT COUNT(O.Id) FROM [Order] O WHERE O.CustomerId = C.Id)
+  FROM Customer C
+ ```
+
+This is a correlated subquery because the subquery references the enclosing query (i.e. the C.Id in the WHERE clause).
+
+
+Problem: List products with order quantities greater than 100.
+
+ ```
+SELECT ProductName
+FROM Product
+WHERE Id IN (SELECT ProductId
+                FROM OrderItem
+               WHERE Quantity > 100)
+ ```
