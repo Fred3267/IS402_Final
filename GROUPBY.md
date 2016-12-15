@@ -1,11 +1,11 @@
 #GROUP BY
 
-The SQL GROUP BY clause is used in collaboration with the SELECT statement to arrange identical data into groups.
+* The SQL GROUP BY clause is used in collaboration with the SELECT statement to arrange identical data into groups.
 
-The GROUP BY clause follows the WHERE clause in a SELECT statement and precedes the ORDER BY clause.
+* The GROUP BY clause follows the WHERE clause in a SELECT statement and precedes the ORDER BY clause.
 
 Syntax:
-The basic syntax of GROUP BY clause is given below. The GROUP BY clause must follow the conditions in the WHERE clause and must precede the ORDER BY clause if one is used.
+The basic syntax of GROUP BY clause is given below. The GROUP BY clause **must follow the conditions in the WHERE clause and must precede the ORDER BY clause if one is used.**
 
 ```
 SELECT column1, column2
