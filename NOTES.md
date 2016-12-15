@@ -1,24 +1,26 @@
+#Subqueries
+
 A Subquery or Inner query or Nested query is a query within another SQL query and embedded within the WHERE clause.
 
 A subquery is used to return data that will be used in the main query as a condition to further restrict the data to be retrieved.
 
 Subqueries can be used with the SELECT, INSERT, UPDATE, and DELETE statements along with the operators like =, <, >, >=, <=, IN, BETWEEN etc.
 
-There are a few rules that subqueries must follow:
+_There are a few rules that subqueries must follow:_
 
-Subqueries must be enclosed within parentheses.
+* Subqueries must be enclosed within parentheses.
 
-A subquery can have only one column in the SELECT clause, unless multiple columns are in the main query for the subquery to compare its selected columns.
+* A subquery can have only one column in the SELECT clause, unless multiple columns are in the main query for the subquery to compare its selected columns.
 
-An ORDER BY cannot be used in a subquery, although the main query can use an ORDER BY. The GROUP BY can be used to perform the same function as the ORDER BY in a subquery.
+* An ORDER BY cannot be used in a subquery, although the main query can use an ORDER BY. The GROUP BY can be used to perform the same function as the ORDER BY in a subquery.
 
-Subqueries that return more than one row can only be used with multiple value operators, such as the IN operator.
+* Subqueries that return more than one row can only be used with multiple value operators, such as the IN operator.
 
-The SELECT list cannot include any references to values that evaluate to a BLOB, ARRAY, CLOB, or NCLOB.
+* The SELECT list cannot include any references to values that evaluate to a BLOB, ARRAY, CLOB, or NCLOB.
 
-A subquery cannot be immediately enclosed in a set function.
+* A subquery cannot be immediately enclosed in a set function.
 
-The BETWEEN operator cannot be used with a subquery; however, the BETWEEN operator can be used within the subquery.
+* The BETWEEN operator cannot be used with a subquery; however, the BETWEEN operator can be used within the subquery.
 
 Subqueries with the SELECT Statement:
 Subqueries are most frequently used with the SELECT statement. The basic syntax is as follows:
