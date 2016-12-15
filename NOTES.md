@@ -31,7 +31,7 @@ WHERE  column_name OPERATOR
       [WHERE])
 Example:
 Consider the CUSTOMERS table having the following records:
-
+```
 +----+----------+-----+-----------+----------+
 | ID | NAME     | AGE | ADDRESS   | SALARY   |
 +----+----------+-----+-----------+----------+
@@ -43,6 +43,7 @@ Consider the CUSTOMERS table having the following records:
 |  6 | Komal    |  22 | MP        |  4500.00 |
 |  7 | Muffy    |  24 | Indore    | 10000.00 |
 +----+----------+-----+-----------+----------+
+```
 Now, let us check following subquery with SELECT statement:
 
 SQL> SELECT *
@@ -52,6 +53,7 @@ SQL> SELECT *
                   WHERE SALARY > 4500) ;
 This would produce the following result:
 
+```
 +----+----------+-----+---------+----------+
 | ID | NAME     | AGE | ADDRESS | SALARY   |
 +----+----------+-----+---------+----------+
@@ -59,6 +61,7 @@ This would produce the following result:
 |  5 | Hardik   |  27 | Bhopal  |  8500.00 |
 |  7 | Muffy    |  24 | Indore  | 10000.00 |
 +----+----------+-----+---------+----------+
+```
 Subqueries with the INSERT Statement:
 Subqueries also can be used with INSERT statements. The INSERT statement uses the data returned from the subquery to insert into another table. The selected data in the subquery can be modified with any of the character, date or number functions.
 
@@ -97,6 +100,7 @@ SQL> UPDATE CUSTOMERS
                    WHERE AGE >= 27 );
 This would impact two rows and finally CUSTOMERS table would have the following records:
 
+```
 +----+----------+-----+-----------+----------+
 | ID | NAME     | AGE | ADDRESS   | SALARY   |
 +----+----------+-----+-----------+----------+
@@ -108,6 +112,8 @@ This would impact two rows and finally CUSTOMERS table would have the following 
 |  6 | Komal    |  22 | MP        |  4500.00 |
 |  7 | Muffy    |  24 | Indore    | 10000.00 |
 +----+----------+-----+-----------+----------+
+```
+
 Subqueries with the DELETE Statement:
 The subquery can be used in conjunction with the DELETE statement like with any other statements mentioned above.
 
@@ -127,7 +133,7 @@ SQL> DELETE FROM CUSTOMERS
      WHERE AGE IN (SELECT AGE FROM CUSTOMERS_BKP
                    WHERE AGE >= 27 );
 This would impact two rows and finally CUSTOMERS table would have the following records:
-
+```
 +----+----------+-----+---------+----------+
 | ID | NAME     | AGE | ADDRESS | SALARY   |
 +----+----------+-----+---------+----------+
@@ -137,3 +143,4 @@ This would impact two rows and finally CUSTOMERS table would have the following 
 |  6 | Komal    |  22 | MP      |  4500.00 |
 |  7 | Muffy    |  24 | Indore  | 10000.00 |
 +----+----------+-----+---------+----------+
+```
