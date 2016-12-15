@@ -16,7 +16,7 @@ HAVING
 ORDER BY
 ```
 
-The HAVING clause *must follow the GROUP BY clause* in a query and must also *precede the ORDER BY clause* if used. The following is the syntax of the SELECT statement, including the HAVING clause:
+The HAVING clause **must follow the GROUP BY clause in a query and must also precede the ORDER BY clause** if used. The following is the syntax of the SELECT statement, including the HAVING clause:
 
 ```
 SELECT column1, column2

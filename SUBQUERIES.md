@@ -1,10 +1,10 @@
 # Subqueries
 
-A Subquery or Inner query or Nested query is a query within another SQL query and embedded within the WHERE clause.
+* A Subquery or Inner query or Nested query is a query within another SQL query and embedded within the WHERE clause.
 
-A subquery is used to return data that will be used in the main query as a condition to further restrict the data to be retrieved.
+* A subquery is used to return data that will be used in the main query as a condition to further restrict the data to be retrieved.
 
-Subqueries can be used with the SELECT, INSERT, UPDATE, and DELETE statements along with the operators like =, <, >, >=, <=, IN, BETWEEN etc.
+* Subqueries can be used with the SELECT, INSERT, UPDATE, and DELETE statements along with the operators like =, <, >, >=, <=, IN, BETWEEN etc.
 
 * A subquery is a SQL query within a query.
 
@@ -224,7 +224,7 @@ WHERE Id IN (SELECT ProductId
 
 
 
-Problem: List all customers with their total number of orders
+*Problem:* List all customers with their total number of orders
 
  ```
 SELECT FirstName, LastName,
@@ -235,7 +235,7 @@ SELECT FirstName, LastName,
 This is a correlated subquery because the subquery references the enclosing query (i.e. the C.Id in the WHERE clause).
 
 
-Problem: List products with order quantities greater than 100.
+*Problem:* List products with order quantities greater than 100.
 
  ```
 SELECT ProductName
