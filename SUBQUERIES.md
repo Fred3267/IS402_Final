@@ -1,4 +1,4 @@
-# Subqueries
+# SUBQUERIES
 
 * A Subquery or Inner query or Nested query is a query within another SQL query and embedded within the WHERE clause.
 
