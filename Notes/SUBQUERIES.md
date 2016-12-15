@@ -73,7 +73,8 @@ This would produce the following result:
 +----+----------+-----+---------+----------+
 ```
 
-Subqueries with the INSERT Statement:
+# Subqueries with the INSERT Statement:
+
 Subqueries also can be used with INSERT statements. The INSERT statement uses the data returned from the subquery to insert into another table. The selected data in the subquery can be modified with any of the character, date or number functions.
 
 The basic syntax is as follows:
@@ -95,7 +96,8 @@ SQL> INSERT INTO CUSTOMERS_BKP
                   FROM CUSTOMERS) ;
 ```
 
-Subqueries with the UPDATE Statement:
+# Subqueries with the UPDATE Statement:
+
 The subquery can be used in conjunction with the UPDATE statement. Either single or multiple columns in a table can be updated when using a subquery with the UPDATE statement.
 
 The basic syntax is as follows:
@@ -137,7 +139,8 @@ This would impact two rows and finally CUSTOMERS table would have the following 
 +----+----------+-----+-----------+----------+
 ```
 
-Subqueries with the DELETE Statement:
+# Subqueries with the DELETE Statement:
+
 The subquery can be used in conjunction with the DELETE statement like with any other statements mentioned above.
 
 The basic syntax is as follows:
